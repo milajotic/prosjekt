@@ -2,14 +2,13 @@
 
 ## 1. Forside
 
-**Prosjekttittel:**\
-**Navn:**\
-**Klasse:**\
-**Dato:**
+**Prosjekttittel: Klesbutikk**\
+**Navn: Mila**\
+**Klasse: 2IMI**\
+**Dato: 11/13/2025**
 
 **Kort beskrivelse av prosjektet:**\
-*Skriv 2--4 setninger om hva applikasjonen gjør og hvilket tema den
-bygger på.*
+*Applikasjonen er en nettbutikk for klær der brukere kan se gjennom produkter, legge varer i handlekurven og bestille klær på nett. Brukerne kan også opprette en konto og logge inn for å administrere bestillingene sine. Temaet bygger på netthandel og brukervennlig design for en moderne klesbutikk.*
 
 ------------------------------------------------------------------------
 
