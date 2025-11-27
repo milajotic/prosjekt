@@ -15,9 +15,9 @@
 ## 2. Systembeskrivelse
 
 **Formål med applikasjonen:**\
-*Formålet med applikasjonen Irisbutikk er å utvikle en enkel og brukervennlig nettbutikk for klær. Løsningen gjør det mulig for brukere å bla gjennom produkter, opprette en brukerprofil og gjennomføre bestillinger på en effektiv måte. Applikasjonen ble utviklet for å lære og demonstrere bruk av webteknologi koblet mot en relasjonsdatabase (MariaDB) ved hjelp av Python.
+Formålet med applikasjonen Irisbutikk er å utvikle en enkel og brukervennlig nettbutikk for klær. Løsningen gjør det mulig for brukere å bla gjennom produkter, opprette en brukerprofil og gjennomføre bestillinger på en effektiv måte. Applikasjonen ble utviklet for å lære og demonstrere bruk av webteknologi koblet mot en relasjonsdatabase (MariaDB) ved hjelp av Python.
 
-Prosjektet har som mål å vise hvordan man kan implementere grunnleggende funksjonalitet for en nettbutikk, inkludert lagring av produkter, brukerdata og bestillinger. Samtidig skal applikasjonen være lett å navigere, gir oversiktlig informasjon og støtte trygg lagring av data i en strukturert database.*
+Prosjektet har som mål å vise hvordan man kan implementere grunnleggende funksjonalitet for en nettbutikk, inkludert lagring av produkter, brukerdata og bestillinger. Samtidig skal applikasjonen være lett å navigere, gir oversiktlig informasjon og støtte trygg lagring av data i en strukturert database.
 
 **Brukerflyt:**\
 *Beskriv hvordan brukeren bruker løsningen -- fra startside til lagring
