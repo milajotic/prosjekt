@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Butikk</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Navn</th>
+            <th>Pris</th>
+            <th>Beskrivelse</th>
+            <th>Handlinger</th>
+        </tr>
+        {% for c in clothes %}
+        <tr>
+            <td>{{ c[0] }}</td>
+            <td>{{ c[1] }}</td>
+            <td>{{ c[2] }}</td>
+            <td>{{ c[3] }}</td>
+            <td>
+                <form action="/bestill/{{ c[0] }}" method="post" style="display:inline;">
+                    <button type="submit">Bestill</button>
+                </form>
+
+                <!-- ADMIN knapper -->
+                <!--
+                <a href="/edit/{{ c[0] }}">Rediger</a>
+                <a href="/delete/{{ c[0] }}" onclick="return confirm('Sikker?');">Slett</a>
+                -->
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
