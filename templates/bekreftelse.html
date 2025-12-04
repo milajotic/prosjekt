@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bestilling Bekreftet</title>
+</head>
+<body>
+    <h1>Bestilling Bekreftet!</h1>
+
+    <h2>Takk for din bestilling, {{ order[2] }} {{ order[3] }}!</h2>
+
+    <p><strong>Ordre ID:</strong> {{ order[0] }}</p>
+    <p><strong>Bestillingsdato:</strong> {{ order[1] }}</p>
+
+    <h3>Produktinformasjon</h3>
+    <p><strong>Produkt:</strong> {{ order[4] }}</p>
+    <p><strong>Pris:</strong> {{ order[5] }} NOK</p>
+
+    <br>
+    <a href="/">Tilbake til forsiden</a>
+</body>
+</html>
