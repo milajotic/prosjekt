@@ -3,7 +3,6 @@ from db import get_connection
 
 app = Flask(__name__)
 
-# Start page
 @app.route("/")
 def index():
     return render_template("index.html") 
@@ -44,26 +43,24 @@ def bestill(cid):
     mydb = get_connection()
     cursor = mydb.cursor()
 
-    # Get product info
     cursor.execute("SELECT id, navn, pris FROM clothes WHERE id = %s", (cid,))
     clothes = cursor.fetchone()
 
     if request.method == "POST":
-        # Get customer info from the form
         fornavn = request.form["fornavn"]
         etternavn = request.form["etternavn"]
         epost = request.form["epost"]
         telefon = request.form.get("telefonnummer")
         adresse = request.form.get("adresse")
 
-        # Check if user already exists
+
         cursor.execute("SELECT id FROM bruker WHERE epost = %s", (epost,))
         existing_user = cursor.fetchone()
 
         if existing_user:
             bruker_id = existing_user[0]
         else:
-            # Insert new user
+
             cursor.execute(
                 "INSERT INTO bruker (fornavn, etternavn, epost, telefonnummer, adresse) VALUES (%s, %s, %s, %s, %s)",
                 (fornavn, etternavn, epost, telefon, adresse)
@@ -71,7 +68,6 @@ def bestill(cid):
             mydb.commit()
             bruker_id = cursor.lastrowid
 
-        # Insert into bestilling
         cursor.execute(
             "INSERT INTO bestilling (bruker_id, clothes_id) VALUES (%s, %s)",
             (bruker_id, cid)
@@ -79,14 +75,11 @@ def bestill(cid):
         mydb.commit()
         mydb.close()
 
-        # Redirect to confirmation page
         return redirect(f"/bestill/{cid}/bekreftelse")
 
     mydb.close()
     return render_template("bestill_form.html", clothes=clothes)
 
-
-# ✅ CONFIRMATION PAGE ROUTE ADDED HERE
 @app.route("/bestill/<int:cid>/bekreftelse")
 def bestill_bekreftelse(cid):
     mydb = get_connection()
