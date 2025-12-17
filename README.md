@@ -96,11 +96,13 @@ Konfigurasjonsverdier som databaseinformasjon og andre innstillinger håndteres 
 
 ## 4. Prosjektstyring -- GitHub Projects (Kanban)
 
--   To Do / In Progress / Done\
--   Issues\
--   Skjermbilde (valgfritt)
+<img width="823" height="341" alt="image" src="https://github.com/user-attachments/assets/b6ec8320-9a6d-42d1-808a-54beb1e036e0" />
+
 
 Refleksjon: Hvordan hjalp Kanban arbeidet?
+-   Kanban hjalp arbeidet ved å gi god oversikt over oppgavene i prosjektet. Ved å dele arbeidet inn i kolonner som «To do», «Doing» og «Done» ble det lettere å se hva som måtte gjøres, hva som var under arbeid, og hva som allerede var ferdig. Dette gjorde planleggingen mer strukturert og bidro til bedre fremdrift.
+
+Kanban gjorde det også enklere å prioritere oppgaver og jobbe steg for steg i stedet for å gjøre alt samtidig. Når en oppgave var fullført, kunne den flyttes til «Done», noe som ga motivasjon og en tydelig følelse av progresjon. Samlet sett bidro Kanban til bedre organisering, mindre stress og mer effektivt arbeid gjennom hele prosjektet.
 
 ------------------------------------------------------------------------
 
