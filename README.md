@@ -80,9 +80,17 @@ Eksempel:
 
 ### Tjenestekonfigurasjon
 
--   systemctl / Supervisor\
--   Filrettigheter\
+-   systemctl / Supervisor
+
+Applikasjonen er utviklet for å kunne kjøres som en tjeneste ved hjelp av systemverktøy som systemctl eller Supervisor. Dette gjør det mulig å starte og stoppe applikasjonen på en kontrollert måte. I dette prosjektet kjøres applikasjonen lokalt under utvikling.
+
+-   Filrettigheter
+
+Filrettigheter er konfigurert slik at applikasjonens filer er beskyttet mot uautorisert tilgang. Kun nødvendige brukere har tilgang til å lese og endre filer, noe som bidrar til økt sikkerhet i løsningen.
+
 -   Miljøvariabler
+
+Konfigurasjonsverdier som databaseinformasjon og andre innstillinger håndteres ved hjelp av miljøvariabler. Dette gjør løsningen mer fleksibel og hindrer at sensitiv informasjon lagres direkte i kildekoden.
 
 ------------------------------------------------------------------------
 
