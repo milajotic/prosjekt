@@ -27,8 +27,7 @@ av data.*
 
 -   Python / Flask\
 -   MariaDB\
--   HTML / CSS / JS\
--   (valgfritt) Docker / Nginx / Gunicorn / Waitress osv.
+-   HTML / CSS /
 
 ------------------------------------------------------------------------
 
