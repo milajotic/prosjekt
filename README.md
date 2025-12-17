@@ -20,8 +20,11 @@ Formålet med applikasjonen Irisbutikk er å utvikle en enkel og brukervennlig n
 Prosjektet har som mål å vise hvordan man kan implementere grunnleggende funksjonalitet for en nettbutikk, inkludert lagring av produkter, brukerdata og bestillinger. Samtidig skal applikasjonen være lett å navigere, gir oversiktlig informasjon og støtte trygg lagring av data i en strukturert database.
 
 **Brukerflyt:**\
-*Beskriv hvordan brukeren bruker løsningen -- fra startside til lagring
-av data.*
+*Brukeren starter på forsiden av applikasjonen, hvor det vises en velkomstmelding med teksten «Velkommen til butikken» samt en knapp for å kjøpe varer. Når brukeren trykker på Buy-knappen, blir de sendt videre til en side som viser en liste over tilgjengelige klær.
+
+På produktsiden kan brukeren velge et plagg og trykke på Bestill. Dette fører brukeren til et bestillingsskjema der nødvendig informasjon fylles inn, som navn, kontaktinformasjon og bestillingsdetaljer. Når skjemaet er sendt inn, lagres informasjonen i databasen.
+
+Etter at bestillingen er fullført, blir brukeren sendt til en bekreftelsesside som viser en takk for bestillingen. På denne siden har brukeren mulighet til å gå tilbake til forsiden.*
 
 **Teknologier brukt:**
 
