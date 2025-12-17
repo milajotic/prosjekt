@@ -38,14 +38,41 @@ Etter at bestillingen er fullført, blir brukeren sendt til en bekreftelsesside 
 
 ### Servermiljø
 
-*F.eks.: Ubuntu VM, Docker, fysisk server.*
+*Ubuntu v.25, Mariadb, Rasberry pi*
 
 ### Nettverksoppsett
 
 -   Nettverksdiagram
 -   IP-adresser\
+  ip-adresser for server (rasberry pi): 10.200.14.21, ip-adresse for klient(windows): 10.2.0.231
 -   Porter\
+  To                         Action      From
+--                         ------      ----
+22/tcp                     ALLOW       Anywhere
+80                         ALLOW       Anywhere
+Samba                      ALLOW       Anywhere
+3306                       ALLOW       Anywhere
+3306/tcp                   ALLOW       Anywhere
+22/tcp (v6)                ALLOW       Anywhere (v6)
+80 (v6)                    ALLOW       Anywhere (v6)
+Samba (v6)                 ALLOW       Anywhere (v6)
+3306 (v6)                  ALLOW       Anywhere (v6)
+3306/tcp (v6)              ALLOW       Anywhere (v6)
 -   Brannmurregler
+  To                         Action      From
+--                         ------      ----
+22/tcp                     ALLOW IN    Anywhere
+80                         ALLOW IN    Anywhere
+137,138/udp (Samba)        ALLOW IN    Anywhere
+139,445/tcp (Samba)        ALLOW IN    Anywhere
+3306                       ALLOW IN    Anywhere
+3306/tcp                   ALLOW IN    Anywhere
+22/tcp (v6)                ALLOW IN    Anywhere (v6)
+80 (v6)                    ALLOW IN    Anywhere (v6)
+137,138/udp (Samba (v6))   ALLOW IN    Anywhere (v6)
+139,445/tcp (Samba (v6))   ALLOW IN    Anywhere (v6)
+3306 (v6)                  ALLOW IN    Anywhere (v6)
+3306/tcp (v6)              ALLOW IN    Anywhere (v6)
 
 Eksempel:
 
