@@ -88,18 +88,19 @@ Kanban gjorde det også enklere å prioritere oppgaver og jobbe steg for steg i 
 *irisbutikk:*
 
 *Tabeller:*\
+
 <img width="182" height="92" alt="image" src="https://github.com/user-attachments/assets/ca7f6b08-5b1e-4f06-ad72-5fdc4d502a6e" />
 
-
 Tabell clothes:
+
 <img width="508" height="114" alt="image" src="https://github.com/user-attachments/assets/0a957f84-2dd6-4fe8-bac8-0f8b16d61c7f" />
 
-
 Tabell bruker:
+
 <img width="512" height="151" alt="image" src="https://github.com/user-attachments/assets/c2394c94-cc13-4492-a8a8-c4a21ce1ab4b" />
 
-
 Tabell bestilling:
+
 <img width="584" height="108" alt="image" src="https://github.com/user-attachments/assets/4dbcd241-e30f-4739-9a64-211711a9985d" />
 
 **SQL-eksempel:**
