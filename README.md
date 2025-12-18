@@ -59,7 +59,7 @@ Eksempel:
 
 -   systemctl / Supervisor
 
-Applikasjonen er utviklet for å kunne kjøres som en tjeneste ved hjelp av systemverktøy som systemctl eller Supervisor. Dette gjør det mulig å starte og stoppe applikasjonen på en kontrollert måte. I dette prosjektet kjøres applikasjonen lokalt under utvikling.
+
 
 -   Filrettigheter
 
