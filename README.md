@@ -151,35 +151,40 @@ Databasestrøm:
 
 ## 7. Kodeforklaring
 
-Applikasjonen er bygget med Flask og bruker en MySQL-database via get_connection().
+Dette prosjektet er en Flask-basert webapplikasjon som er koblet til en MySQL-database ved hjelp av `get_connection()`.
 
-/
-Viser forsiden (index.html).
+### Ruter
 
-/clothes
-Henter alle produkter fra clothes-tabellen og viser dem i clothes.html.
+#### `/`
+Viser forsiden (`index.html`).
 
-/add
-Lar brukeren legge til et nytt produkt.
-Ved POST lagres produktet i databasen, ved GET vises skjemaet.
+#### `/clothes`
+Henter alle produkter fra `clothes`-tabellen og viser dem på produktsiden.
 
-/bestill/<cid>
-Viser bestillingsskjema for et valgt produkt.
-Hvis e-posten allerede finnes i bruker-tabellen, gjenbrukes brukeren.
-Hvis ikke opprettes en ny bruker.
-Deretter opprettes en rad i bestilling som kobler bruker og produkt.
+#### `/add`
+Brukes til å legge til nye produkter.
+- **GET**: Viser skjema for nytt produkt  
+- **POST**: Lagrer produktet i databasen og videresender til `/clothes`
 
-/bestill/<cid>/bekreftelse
-Viser bekreftelse på siste bestilling ved å bruke JOIN mellom
-bestilling, bruker og clothes.
+#### `/bestill/<cid>`
+Håndterer bestilling av et valgt produkt.
+- Viser bestillingsskjema for valgt plagg
+- Sjekker om en bruker med gitt e-post allerede finnes
+- Oppretter ny bruker hvis ingen finnes
+- Oppretter en bestilling som kobler bruker og produkt
 
-/edit/<cid>
+#### `/bestill/<cid>/bekreftelse`
+Viser en bekreftelsesside for bestillingen.
+- Bruker `JOIN` for å hente data fra `bestilling`, `bruker` og `clothes`
+- Viser informasjon om bruker, produkt og bestillingsdato
+
+#### `/edit/<cid>`
 Henter produktdata og viser skjema for redigering.
 
-/update
+#### `/update`
 Oppdaterer et eksisterende produkt i databasen.
 
-/delete/<cid>
+#### `/delete/<cid>`
 Sletter et produkt fra databasen.
 
 ------------------------------------------------------------------------
