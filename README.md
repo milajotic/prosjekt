@@ -108,21 +108,55 @@ Kanban gjorde det også enklere å prioritere oppgaver og jobbe steg for steg i 
 
 ## 5. Databasebeskrivelse
 
-**Databasenavn:**
+*irisbutikk:*
 
-**Tabeller:**\
-\| Tabell \| Felt \| Datatype \| Beskrivelse \|
-\|--------\|-------\|-----------\|--------------\| \| customers \| id \|
-INT \| Primærnøkkel \| \| customers \| name \| VARCHAR(255) \| Navn \|
-\| customers \| address \| VARCHAR(255) \| Adresse \|
+*Tabeller:*\
++----------------------+
+| Tables_in_irisbutikk |
++----------------------+
+| bestilling           |
+| bruker               |
+| clothes              |
++----------------------+
+Tabell clothes:
++-------------+---------------+------+-----+---------+----------------+
+| Field       | Type          | Null | Key | Default | Extra          |
++-------------+---------------+------+-----+---------+----------------+
+| id          | int(11)       | NO   | PRI | NULL    | auto_increment |
+| navn        | varchar(50)   | NO   |     | NULL    |                |
+| pris        | decimal(10,2) | NO   |     | NULL    |                |
+| beskrivelse | text          | YES  |     | NULL    |                |
++-------------+---------------+------+-----+---------+----------------+
+Tabell bruker:
++---------------+--------------+------+-----+---------+----------------+
+| Field         | Type         | Null | Key | Default | Extra          |
++---------------+--------------+------+-----+---------+----------------+
+| id            | int(11)      | NO   | PRI | NULL    | auto_increment |
+| epost         | varchar(100) | YES  | UNI | NULL    |                |
+| fornavn       | varchar(50)  | NO   |     | NULL    |                |
+| etternavn     | varchar(50)  | NO   |     | NULL    |                |
+| telefonnummer | varchar(15)  | YES  |     | NULL    |                |
+| adresse       | varchar(100) | YES  |     | NULL    |                |
+| passord       | varchar(100) | YES  |     | NULL    |                |
++---------------+--------------+------+-----+---------+----------------+
+Tabell bestilling:
++-----------------+-----------+------+-----+---------------------+----------------+
+| Field           | Type      | Null | Key | Default             | Extra          |
++-----------------+-----------+------+-----+---------------------+----------------+
+| id              | int(11)   | NO   | PRI | NULL                | auto_increment |
+| bruker_id       | int(11)   | NO   | MUL | NULL                |                |
+| clothes_id      | int(11)   | NO   | MUL | NULL                |                |
+| bestillingsdato | timestamp | YES  |     | current_timestamp() |                |
++-----------------+-----------+------+-----+---------------------+----------------+
 
 **SQL-eksempel:**
 
 ``` sql
-CREATE TABLE customers (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(255),
-  address VARCHAR(255)
+CREATE TABLE clothes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    navn VARCHAR(50) NOT NULL,
+    pris DECIMAL(10,2) NOT NULL,
+    beskrivelse TEXT
 );
 ```
 
@@ -130,7 +164,7 @@ CREATE TABLE customers (
 
 ## 6. Programstruktur
 
-    projectnavn/
+    PROSJEKT/
      ├── app.py
      ├── templates/
      ├── static/
