@@ -151,7 +151,36 @@ Databasestrøm:
 
 ## 7. Kodeforklaring
 
-Forklar ruter og funksjoner (kort).
+Applikasjonen er bygget med Flask og bruker en MySQL-database via get_connection().
+
+/
+Viser forsiden (index.html).
+
+/clothes
+Henter alle produkter fra clothes-tabellen og viser dem i clothes.html.
+
+/add
+Lar brukeren legge til et nytt produkt.
+Ved POST lagres produktet i databasen, ved GET vises skjemaet.
+
+/bestill/<cid>
+Viser bestillingsskjema for et valgt produkt.
+Hvis e-posten allerede finnes i bruker-tabellen, gjenbrukes brukeren.
+Hvis ikke opprettes en ny bruker.
+Deretter opprettes en rad i bestilling som kobler bruker og produkt.
+
+/bestill/<cid>/bekreftelse
+Viser bekreftelse på siste bestilling ved å bruke JOIN mellom
+bestilling, bruker og clothes.
+
+/edit/<cid>
+Henter produktdata og viser skjema for redigering.
+
+/update
+Oppdaterer et eksisterende produkt i databasen.
+
+/delete/<cid>
+Sletter et produkt fra databasen.
 
 ------------------------------------------------------------------------
 
