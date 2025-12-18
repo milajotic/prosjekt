@@ -47,6 +47,7 @@ Etter at bestillingen er fullført, blir brukeren sendt til en bekreftelsesside 
   ip-adresser for server (rasberry pi): 10.200.14.21, ip-adresse for klient(windows): 10.2.0.231
 -   Porter\
 <img width="376" height="174" alt="image" src="https://github.com/user-attachments/assets/89f8f8f0-f233-434e-80da-b434d6fd0e03" />
+
 -   Brannmurregler
 <img width="375" height="199" alt="image" src="https://github.com/user-attachments/assets/0ca9a786-8de7-45ef-ac13-bcb8c42b3a32" />
 
