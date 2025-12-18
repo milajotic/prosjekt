@@ -67,6 +67,7 @@ def bestill(cid):
             )
             mydb.commit()
             bruker_id = cursor.lastrowid
+          
 
         cursor.execute(
             "INSERT INTO bestilling (bruker_id, clothes_id) VALUES (%s, %s)",
