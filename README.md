@@ -46,37 +46,13 @@ Etter at bestillingen er fullført, blir brukeren sendt til en bekreftelsesside 
 -   IP-adresser\
   ip-adresser for server (rasberry pi): 10.200.14.21, ip-adresse for klient(windows): 10.2.0.231
 -   Porter\
-  To                         Action      From
---                         ------      ----
-22/tcp                     ALLOW       Anywhere
-80                         ALLOW       Anywhere
-Samba                      ALLOW       Anywhere
-3306                       ALLOW       Anywhere
-3306/tcp                   ALLOW       Anywhere
-22/tcp (v6)                ALLOW       Anywhere (v6)
-80 (v6)                    ALLOW       Anywhere (v6)
-Samba (v6)                 ALLOW       Anywhere (v6)
-3306 (v6)                  ALLOW       Anywhere (v6)
-3306/tcp (v6)              ALLOW       Anywhere (v6)
+<img width="376" height="174" alt="image" src="https://github.com/user-attachments/assets/89f8f8f0-f233-434e-80da-b434d6fd0e03" />
 -   Brannmurregler
-  To                         Action      From
---                         ------      ----
-22/tcp                     ALLOW IN    Anywhere
-80                         ALLOW IN    Anywhere
-137,138/udp (Samba)        ALLOW IN    Anywhere
-139,445/tcp (Samba)        ALLOW IN    Anywhere
-3306                       ALLOW IN    Anywhere
-3306/tcp                   ALLOW IN    Anywhere
-22/tcp (v6)                ALLOW IN    Anywhere (v6)
-80 (v6)                    ALLOW IN    Anywhere (v6)
-137,138/udp (Samba (v6))   ALLOW IN    Anywhere (v6)
-139,445/tcp (Samba (v6))   ALLOW IN    Anywhere (v6)
-3306 (v6)                  ALLOW IN    Anywhere (v6)
-3306/tcp (v6)              ALLOW IN    Anywhere (v6)
+<img width="375" height="199" alt="image" src="https://github.com/user-attachments/assets/0ca9a786-8de7-45ef-ac13-bcb8c42b3a32" />
 
 Eksempel:
 
-    Klient → Waitress → MariaDB
+    HTML → Flask → MariaDB → Flask → HTML-tabell
 
 ### Tjenestekonfigurasjon
 
@@ -111,43 +87,16 @@ Kanban gjorde det også enklere å prioritere oppgaver og jobbe steg for steg i 
 *irisbutikk:*
 
 *Tabeller:*\
-+----------------------+
-| Tables_in_irisbutikk |
-+----------------------+
-| bestilling           |
-| bruker               |
-| clothes              |
-+----------------------+
+<img width="182" height="92" alt="image" src="https://github.com/user-attachments/assets/ca7f6b08-5b1e-4f06-ad72-5fdc4d502a6e" />
+
 Tabell clothes:
-+-------------+---------------+------+-----+---------+----------------+
-| Field       | Type          | Null | Key | Default | Extra          |
-+-------------+---------------+------+-----+---------+----------------+
-| id          | int(11)       | NO   | PRI | NULL    | auto_increment |
-| navn        | varchar(50)   | NO   |     | NULL    |                |
-| pris        | decimal(10,2) | NO   |     | NULL    |                |
-| beskrivelse | text          | YES  |     | NULL    |                |
-+-------------+---------------+------+-----+---------+----------------+
+<img width="508" height="114" alt="image" src="https://github.com/user-attachments/assets/0a957f84-2dd6-4fe8-bac8-0f8b16d61c7f" />
+
 Tabell bruker:
-+---------------+--------------+------+-----+---------+----------------+
-| Field         | Type         | Null | Key | Default | Extra          |
-+---------------+--------------+------+-----+---------+----------------+
-| id            | int(11)      | NO   | PRI | NULL    | auto_increment |
-| epost         | varchar(100) | YES  | UNI | NULL    |                |
-| fornavn       | varchar(50)  | NO   |     | NULL    |                |
-| etternavn     | varchar(50)  | NO   |     | NULL    |                |
-| telefonnummer | varchar(15)  | YES  |     | NULL    |                |
-| adresse       | varchar(100) | YES  |     | NULL    |                |
-| passord       | varchar(100) | YES  |     | NULL    |                |
-+---------------+--------------+------+-----+---------+----------------+
+<img width="512" height="151" alt="image" src="https://github.com/user-attachments/assets/c2394c94-cc13-4492-a8a8-c4a21ce1ab4b" />
+
 Tabell bestilling:
-+-----------------+-----------+------+-----+---------------------+----------------+
-| Field           | Type      | Null | Key | Default             | Extra          |
-+-----------------+-----------+------+-----+---------------------+----------------+
-| id              | int(11)   | NO   | PRI | NULL                | auto_increment |
-| bruker_id       | int(11)   | NO   | MUL | NULL                |                |
-| clothes_id      | int(11)   | NO   | MUL | NULL                |                |
-| bestillingsdato | timestamp | YES  |     | current_timestamp() |                |
-+-----------------+-----------+------+-----+---------------------+----------------+
+<img width="584" height="108" alt="image" src="https://github.com/user-attachments/assets/4dbcd241-e30f-4739-9a64-211711a9985d" />
 
 **SQL-eksempel:**
 
