@@ -113,7 +113,26 @@ CREATE TABLE clothes (
     beskrivelse TEXT
 );
 ```
+Databasen består av tre tabeller: clothes, bruker og bestilling.
 
+- clothes
+Inneholder produkter som kan bestilles.
+id er primærnøkkel.
+
+- bruker
+Inneholder registrerte brukere.
+id er primærnøkkel.
+
+- bestilling
+Knytter brukere og produkter sammen.
+bruker_id refererer til bruker.id
+clothes_id refererer til clothes.id
+bestillingsdato settes automatisk ved opprettelse.
+
+## Hvordan det fungerer
+
+- En rad i bestilling representerer én bestilling der én bruker bestiller ett produkt.
+Dette gjør at én bruker kan ha flere bestillinger, og ett produkt kan bli bestilt av flere brukere.
 ------------------------------------------------------------------------
 
 ## 6. Programstruktur
